@@ -1,0 +1,15 @@
+# Preserve source data bytes: the notebook verifies SHA-256 hashes.
+*.csv -text whitespace=cr-at-eol
+
+# Keep the hashed inference implementation consistent across platforms.
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.ipynb text eol=lf
+
+*.xlsx binary
+*.pptx binary
+*.pkl binary
+*.npz binary
+*.cbm binary

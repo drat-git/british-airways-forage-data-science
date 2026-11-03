@@ -1,0 +1,159 @@
+{
+  "model": "Selected random forest with airport endpoints",
+  "parameters": {
+    "n_estimators": 200,
+    "max_depth": 25,
+    "max_features": 0.2,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "threshold": 0.22,
+  "categorical_inputs": [
+    "sales_channel",
+    "trip_type",
+    "flight_day",
+    "route",
+    "booking_origin",
+    "airport_1",
+    "airport_2"
+  ],
+  "numeric_inputs": [
+    "num_passengers",
+    "purchase_lead",
+    "length_of_stay",
+    "flight_hour",
+    "wants_extra_baggage",
+    "wants_preferred_seat",
+    "wants_in_flight_meals",
+    "flight_duration"
+  ],
+  "required_raw_columns": [
+    "num_passengers",
+    "sales_channel",
+    "trip_type",
+    "purchase_lead",
+    "length_of_stay",
+    "flight_hour",
+    "flight_day",
+    "route",
+    "booking_origin",
+    "wants_extra_baggage",
+    "wants_preferred_seat",
+    "wants_in_flight_meals",
+    "flight_duration"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1"
+  },
+  "data_sha256": "f7108ec998528b72a0624a2d137521be99486e87ebe93a018b7fcaa6fdc3b4d2",
+  "assets_sha256": {
+    "random_forest_model.pkl": "ba627f37429abd6b41df79caba9f76d59c400e604eeab517f2015eeefc77c109",
+    "test_predictions.npz": "5cd50a6e2e4a636e93e31df1ac8dbed5ae48592d4e668d2ddc6ac9c899d8210b",
+    "development_folds.csv": "347a4c96a0fba45b2544a7b5bb912588d3e35a5590d8ad0ef6ac0ff1a8fd072d",
+    "development_predictions.npz": "12ca66cbbddca4568d7360c0ece2d0c284f45236970530a6b6db060e889de382"
+  },
+  "development_summary": {
+    "candidate": "prior_depth25_control",
+    "airports": true,
+    "drop_time": false,
+    "max_depth": 25,
+    "max_features": 0.2,
+    "min_samples_leaf": 5,
+    "min_frequency": null,
+    "train_AP": 0.7102663763988192,
+    "validation_AP": 0.38566063259595584,
+    "validation_AP_std": 0.020178327265862727,
+    "validation_AUC": 0.7943304914609877,
+    "validation_Brier": 0.10832397627877019,
+    "mean_depth": 25.0,
+    "fit_seconds": 15.720566540956497,
+    "AP_gap": 0.32460574380286333
+  },
+  "benchmark": {
+    "evaluated_at_utc": "2026-11-03T02:34:19.038406+00:00",
+    "plan_fingerprint": "5f4aad7aaf5a73403912dfb64b5ff7066c8d066fc91b44e410c96b91a169bc9b",
+    "test_evaluated": true,
+    "threshold": 0.22,
+    "selected_candidate": "depth_25_features_20",
+    "development_OOF_metrics": {
+      "Average precision": 0.3829380212268817,
+      "ROC-AUC": 0.7941693623025222,
+      "Precision": 0.34933182759269715,
+      "Recall": 0.6184605131622792,
+      "F1": 0.4464758239114746,
+      "Accuracy": 0.7697503377195177
+    },
+    "test_metrics": {
+      "Average precision": 0.36997117047790706,
+      "ROC-AUC": 0.7859336518803784,
+      "Precision": 0.3443858327053504,
+      "Recall": 0.6192411924119241,
+      "F1": 0.44261501210653753,
+      "Accuracy": 0.7703969678835029
+    },
+    "test_counts": {
+      "test_rows": 10026,
+      "actual_completions": 1476,
+      "positive_share": 0.14721723518850988,
+      "flagged": 2654,
+      "flagged_share": 0.2647117494514263,
+      "true_positive": 914,
+      "false_positive": 1740,
+      "false_negative": 562,
+      "true_negative": 6810
+    },
+    "confidence_intervals": {
+      "Average precision": {
+        "Test estimate": 0.36997117047790706,
+        "95% lower": 0.34765138183329364,
+        "95% upper": 0.39657561708982403
+      },
+      "ROC-AUC": {
+        "Test estimate": 0.7859336518803784,
+        "95% lower": 0.7737303194851108,
+        "95% upper": 0.7974655749878026
+      },
+      "Precision": {
+        "Test estimate": 0.3443858327053504,
+        "95% lower": 0.3258624982864621,
+        "95% upper": 0.3624442338101466
+      },
+      "Recall": {
+        "Test estimate": 0.6192411924119241,
+        "95% lower": 0.5930437805603845,
+        "95% upper": 0.6428196865401291
+      },
+      "F1": {
+        "Test estimate": 0.44261501210653753,
+        "95% lower": 0.4228762426137444,
+        "95% upper": 0.4613184356247812
+      }
+    },
+    "bootstrap": {
+      "method": "percentile bootstrap of test duplicate-detail groups",
+      "replicates": 1000,
+      "seed": 20261102,
+      "confidence": 0.95
+    },
+    "no_selection_after_test": true
+  },
+  "test_already_evaluated": true,
+  "alternative": {
+    "name": "search_13",
+    "spec": {
+      "airports": true,
+      "drop_time": true,
+      "max_depth": 30,
+      "max_features": 0.2,
+      "min_samples_leaf": 5,
+      "min_frequency": null
+    },
+    "mean_validation_AP": 0.3833234283272851,
+    "development_F1_at_022": 0.45190876064558394,
+    "status": "Historical challenger; no alternate fitted model retained."
+  },
+  "continuation": "Use this notebook for development-only changes. Saved test results remain the frozen benchmark; do not select new settings against the used test set.",
+  "implementation_sha256": "ff9853d54104ded27fce5695c24a50cb58c2f3b2d7598255444de7232e06e99d"
+}

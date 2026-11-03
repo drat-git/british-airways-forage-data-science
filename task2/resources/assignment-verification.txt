@@ -1,0 +1,20 @@
+Forage Task 2 verification, 2 November 2026, America/New_York
+
+Opened the authenticated Task 2 pages in the in-app browser and reviewed steps 1, 2 and 3. Reviewed the overview's rendered visual learning/task panels. The overview also embeds a 39-second introductory video. No claim here relies on its audio.
+
+Assignment: explore and prepare the data, fit a predictive model, use cross-validation and appropriate metrics, visualise variable contributions, and summarise findings on ONE slide for a manager. The page suggests a random forest as an example rather than mandating that algorithm.
+
+The task prose mentions a PowerPoint Template. The visible resource section contains only Getting Started.ipynb, the customer booking CSV, and two scikit-learn documentation links. No template download is exposed there. No template was invented or represented as official.
+
+The upload accepts PDF, PPTX, PPT, PPS, ODP, KEY and FIG. Steps 4 and 5 are locked before submission. No file was uploaded or submitted.
+
+Original starter notebook saved here. Original CSV downloaded separately and byte-compared successfully to task2/data/customer_booking.csv. Forage labels the CSV as for simulation use only.
+
+Task URL:
+https://www.theforage.com/virtual-experience/NjynCWzGSaWXQCxSX/british-airways/data-science-yqoz/predicting-customer-buying-behaviour?step=3
+
+Starter:
+https://cdn.theforage.com/vinternships/companyassets/tMjbs76F526fF5v3G/L3MQ8f6cYSkfoukmz/1666877712550/Getting%20Started.ipynb
+
+CSV:
+https://cdn.theforage.com/vinternships/companyassets/tMjbs76F526fF5v3G/L3MQ8f6cYSkfoukmz/1667814300249/customer_booking.csv

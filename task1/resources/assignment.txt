@@ -1,0 +1,43 @@
+FORAGE TASK 1 REQUIREMENTS
+Reviewed 2 November 2026, America/New_York.
+
+Task: Modeling lounge eligibility at Heathrow Terminal 3
+https://www.theforage.com/virtual-experience/NjynCWzGSaWXQCxSX/british-airways/data-science-yqoz/modeling-lounge-eligibility-at-heathrow-terminal-3?step=1
+
+Purpose: create a reusable lookup table of lounge eligibility percentages for future
+flight schedules, supported by a written justification.
+
+Use high-level categories, such as time of day, route type or destination region,
+rather than depending on a particular flight number or aircraft. Estimate eligibility
+for three tiers. The simulation's diagram defines:
+  Tier 1, Concorde Room level: First Class, BA Premier, BA Gold Guest List.
+  Tier 2, First Lounge: BA Gold.
+  Tier 3, Club Lounge: BA Silver and Club World business class.
+
+Apply the categories and rates to a representative sample of the provided schedule.
+Analyzing every flight is not required. The illustrated sample includes flight number,
+departure time, destination, category and three tier percentages.
+
+The task explicitly treats Tier 1 as potential future capacity: it states that there
+is currently no Concorde Room at Terminal 3. This is the exercise's planning scenario.
+Eligibility estimates do not establish actual visits or simultaneous occupancy.
+
+Required submission: the provided Excel lookup template with group percentages for
+all three tiers, plus answers on its Justification worksheet explaining grouping,
+rationale, assumptions and application to future/unknown schedules.
+
+Official schedule:
+https://cdn.theforage.com/vinternships/companyassets/tMjbs76F526fF5v3G/L3MQ8f6cYSkfoukmz/1747756641734/British%20Airways%20Summer%20Schedule%20Dataset%20-%20Forage%20Data%20Science%20Task%201.xlsx
+
+Official submission template:
+https://cdn.theforage.com/vinternships/companyassets/tMjbs76F526fF5v3G/L3MQ8f6cYSkfoukmz/1747756933682/Lounge%20Eligibility%20Lookup%20Template%20-%20Task%201.xlsx
+
+Lounge-tier diagram:
+https://cdn.theforage.com/vinternships/companyassets/tMjbs76F526fF5v3G/L3MQ8f6cYSkfoukmz/1747756205049/BA-Lounge%20eligibility.png
+
+Forage identifies the provided files as for simulation use only.
+
+The example answer on step 7 illustrates AM/PM and route/region groupings with
+assumed rates and answers to the four justification questions. The page explicitly
+accepts different outputs when assumptions are clear and well reasoned. Our existing
+eight-group solution was retained without changing it to match those examples.

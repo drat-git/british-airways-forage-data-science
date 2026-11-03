@@ -1,0 +1,118 @@
+{
+  "selected_name": "original_d6_i500",
+  "parameters": {
+    "iterations": 500,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 10,
+    "loss_function": "Logloss",
+    "random_seed": 42,
+    "thread_count": 4,
+    "verbose": false,
+    "allow_writing_files": false
+  },
+  "rule": "AP gain >=0.002 and at least 4 of 5 paired folds improve; otherwise retain original",
+  "holdout_used_for_selection": false,
+  "threshold": 0.22,
+  "model": "CatBoost with route endpoints",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "cloudpickle": "3.1.2",
+    "catboost": "1.2.10"
+  },
+  "required_raw_columns": [
+    "num_passengers",
+    "sales_channel",
+    "trip_type",
+    "purchase_lead",
+    "length_of_stay",
+    "flight_hour",
+    "flight_day",
+    "route",
+    "booking_origin",
+    "wants_extra_baggage",
+    "wants_preferred_seat",
+    "wants_in_flight_meals",
+    "flight_duration"
+  ],
+  "categorical_inputs": [
+    "sales_channel",
+    "trip_type",
+    "flight_day",
+    "route",
+    "booking_origin",
+    "airport_1",
+    "airport_2"
+  ],
+  "data_sha256": "f7108ec998528b72a0624a2d137521be99486e87ebe93a018b7fcaa6fdc3b4d2",
+  "inference_code_sha256": "957ba02c3de193217b03a9c36f1ade453d0a660708834f21dafcdff792069e10",
+  "evaluation_status": "Secondary check on a previously used holdout; not an untouched final test",
+  "mean_development_fold_AP": 0.39049742664086007,
+  "development_OOF_metrics": {
+    "Average precision": 0.38737233341483057,
+    "ROC-AUC": 0.7996553029950809,
+    "Precision": 0.3464685998932574,
+    "Recall": 0.6489503498833722,
+    "F1": 0.4517513337972628,
+    "Accuracy": 0.7634962725771751
+  },
+  "previously_used_holdout_metrics": {
+    "Average precision": 0.37345562477560923,
+    "ROC-AUC": 0.7881947812168181,
+    "Precision": 0.3289290681502086,
+    "Recall": 0.6409214092140921,
+    "F1": 0.43474264705882354,
+    "Accuracy": 0.7546379413524835
+  },
+  "holdout_confusion_matrix": [
+    [
+      6620,
+      1930
+    ],
+    [
+      530,
+      946
+    ]
+  ],
+  "conditional_group_bootstrap_intervals": {
+    "Average precision": {
+      "Estimate": 0.37345562477560923,
+      "95% lower": 0.35066904519461917,
+      "95% upper": 0.3993927203453896
+    },
+    "F1": {
+      "Estimate": 0.43474264705882354,
+      "95% lower": 0.41491297066230187,
+      "95% upper": 0.45354727542105605
+    },
+    "Precision": {
+      "Estimate": 0.3289290681502086,
+      "95% lower": 0.31110740220192085,
+      "95% upper": 0.3466400780247093
+    },
+    "ROC-AUC": {
+      "Estimate": 0.7881947812168181,
+      "95% lower": 0.7760917216556328,
+      "95% upper": 0.7993186095309042
+    },
+    "Recall": {
+      "Estimate": 0.6409214092140921,
+      "95% lower": 0.6167398524099411,
+      "95% upper": 0.6661847319803511
+    }
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20261102,
+    "method": "group percentile bootstrap of fixed predictions"
+  },
+  "assets_sha256": {
+    "holdout_predictions.npz": "6283957cc01c002e5541057ecc2e5687f81fd9c5b8579fdf27fb9e8a9f0069eb",
+    "catboost_bundle.pkl": "395b42610bf2c6677a884da7c42e8cd1f2f941273ea4e2e8f1a19802b4617550",
+    "catboost_model.cbm": "736622e2dc49a84e45252eb71f3c5c068f0990b8db731891da3e717c4afa9115",
+    "development_predictions.npz": "d4ab8a9d2a7055e7a82e602f2e4405ba4015c63b37e4776173babc049e9b6731"
+  }
+}
