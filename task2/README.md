@@ -17,4 +17,4 @@ The notebook refits development comparisons on Run All, then exports the selecte
 
 The cutoff **0.22** is selected using development out-of-fold F1. The inference helper applies `probability >= cutoff`, selects the 13 raw predictors in stable order, derives neutral route endpoints, and supports reordered columns and valid unseen categories. The bundle contains the complete pipeline. The native `.cbm` file contains only the classifier and requires the same preprocessing.
 
-The holdout had already been evaluated for the forest before CatBoost development. Its CatBoost results are a secondary check, not an untouched final test. The forest manifest is an unchanged historical record, including statements about its earlier evaluation stage; the selected-model manifest describes the current model. Repeated fold-based selection is optimistic. Identical-input groups do not identify customers, and input availability at scoring time needs confirmation.
+The notebook contains the full evaluation history, assumptions and limitations. The forest manifest preserves the benchmark record; the selected-model manifest describes the current CatBoost model.

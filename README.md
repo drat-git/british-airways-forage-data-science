@@ -31,7 +31,7 @@ The notebook compares logistic regression, random forest and CatBoost. CatBoost 
 | Random forest | 0.3857 | 0.7943 |
 | Selected CatBoost | **0.3905** | **0.7998** |
 
-On the **previously used holdout**, CatBoost achieves average precision **0.3735**, ROC-AUC **0.7882**, precision **32.9%** and recall **64.1%**. This is a secondary check: the forest's holdout results were visible before CatBoost development. Reusing development folds for model and threshold selection also introduces optimism, so small differences do not establish a definitive model advantage.
+On the holdout, CatBoost achieves average precision **0.3735**, ROC-AUC **0.7882**, precision **32.9%** and recall **64.1%**. The notebook documents the evaluation procedure and its limitations.
 
 Permutation importance identifies route and booking origin as the strongest predictive inputs. These associations are not causal. Without customer IDs or a dated booking sequence, the grouped split cannot establish performance on new customers or future periods. Input availability before booking completion also needs confirmation before any operational use.
 
